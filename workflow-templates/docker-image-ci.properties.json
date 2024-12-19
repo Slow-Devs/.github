@@ -1,0 +1,11 @@
+{
+    "name": "Slow Devs CI Pipeline",
+    "description": "The only way to make Dockerimages",
+    "iconName": "octicon tools",
+    "categories": [
+        "continuous-integration", "Dockerfile"
+    ],
+    "filePatterns": [
+        "^Dockerfile"
+    ]
+}
