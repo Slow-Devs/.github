@@ -1,0 +1,11 @@
+{
+    "name": "Docker Image Continuous Integration",
+    "description": "Our CI workflow template that contains all mandatory checks",
+    "iconName": "octicon tools",
+    "categories": [
+        "Go"
+    ],
+    "filePatterns": [
+        "^Dockerfile"
+    ]
+}
