@@ -4,4 +4,4 @@ on: [push, pull_request]
 
 jobs:
   build:
-    uses: template-cicd/.github/workflows/docker/docker-build.yml@main
+    uses: slow-devs/template-cicd/.github/workflows/docker/docker-build.yml@main
