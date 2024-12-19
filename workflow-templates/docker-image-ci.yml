@@ -4,25 +4,4 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-
-      - name: Build Docker Image
-        run: docker build -t my-app:${{ github.sha }} .
-
-      - name: Save Docker Image
-        run: docker save -o my-app.tar my-app:${{ github.sha }}
-
-      - name: Scan with Clair
-        uses: quay/clair-action@main
-        with:
-          image-path: my-app.tar
-          format: sarif
-          output: clair_results.sarif
-
-      - name: Upload SARIF Report
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: clair_results.sarif
+    uses: .github/workflows/docker/docker-build.yml@main
